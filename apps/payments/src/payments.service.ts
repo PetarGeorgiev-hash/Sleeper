@@ -32,7 +32,7 @@ export class PaymentsService {
         allow_redirects: 'never'
       }
     })
-    this.notificationService.emit('notify-email', {email})
+    this.notificationService.emit('notify-email', {email, text: `Your payment of $${amount} has been completed`})
     return paymentIntent;
   }
 }
