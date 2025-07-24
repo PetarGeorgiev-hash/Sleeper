@@ -10,6 +10,8 @@ export class NotificationController {
 
   @EventPattern('notify-email')
   async notifyEmail(@Payload() data: NotifyDto){
+
+    //test
     this.notoficationsService.notify(data);
   }
 }
