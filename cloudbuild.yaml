@@ -1,56 +1,65 @@
 steps:
-  #Reservations
+  # Reservations
   - name: 'gcr.io/cloudbuilders/docker'
-    args: [
-      'build',
-      '-t',
-      'europe-west1-docker.pkg.dev/sleeper-466517/reservations/production',
-      '-f',
-      'apps/reservations/Dockerfile',
-      '.'
-    ]
+    args:
+      [
+        'build',
+        '-t',
+        'europe-west1-docker.pkg.dev/sleeper-466517/reservations/production',
+        '-f',
+        'apps/reservations/Dockerfile',
+        '.',
+      ]
   - name: 'gcr.io/cloudbuilders/docker'
-   args: 
-      ['push', 'europe-west1-docker.pkg.dev/sleeper-466517/reservations/production']
+    args:
+      [
+        'push',
+        'europe-west1-docker.pkg.dev/sleeper-466517/reservations/production',
+      ]
 
-  #Auth
+  # Auth
   - name: 'gcr.io/cloudbuilders/docker'
-    args: [
-      'build',
-      '-t',
-      'europe-west1-docker.pkg.dev/sleeper-466517/auth/production',
-      '-f',
-      'apps/auth/Dockerfile',
-      '.'
-    ]
+    args:
+      [
+        'build',
+        '-t',
+        'europe-west1-docker.pkg.dev/sleeper-466517/auth/production',
+        '-f',
+        'apps/auth/Dockerfile',
+        '.',
+      ]
   - name: 'gcr.io/cloudbuilders/docker'
-    args: 
-      ['push', 'europe-west1-docker.pkg.dev/sleeper-466517/auth/production']
+    args: ['push', 'europe-west1-docker.pkg.dev/sleeper-466517/auth/production']
 
-  #Notifications
+  # Notifications
   - name: 'gcr.io/cloudbuilders/docker'
-    args: [
-      'build',
-      '-t',
-      'europe-west10-docker.pkg.dev/sleeper-466517/notifications/production',
-      '-f',
-      'apps/notifications/Dockerfile',
-      '.'
-    ]
-  -name: 'gcr.io/cloudbuilders/docker'
-    args: 
-      ['push', 'europe-west10-docker.pkg.dev/sleeper-466517/notifications/production']
+    args:
+      [
+        'build',
+        '-t',
+        'europe-west10-docker.pkg.dev/sleeper-466517/notifications/production',
+        '-f',
+        'apps/notifications/Dockerfile',
+        '.',
+      ]
+  - name: 'gcr.io/cloudbuilders/docker'
+    args:
+      [
+        'push',
+        'europe-west10-docker.pkg.dev/sleeper-466517/notifications/production',
+      ]
 
-  #Payments
+  # Payments
   - name: 'gcr.io/cloudbuilders/docker'
-    args: [
-      'build',
-      '-t',
-      'europe-west1-docker.pkg.dev/sleeper-466517/payments/production',
-      '-f',
-      'apps/payments/Dockerfile',
-      '.'
-    ]
+    args:
+      [
+        'build',
+        '-t',
+        'europe-west1-docker.pkg.dev/sleeper-466517/payments/production',
+        '-f',
+        'apps/payments/Dockerfile',
+        '.',
+      ]
   - name: 'gcr.io/cloudbuilders/docker'
-    args: 
+    args:
       ['push', 'europe-west1-docker.pkg.dev/sleeper-466517/payments/production']
