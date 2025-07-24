@@ -9,7 +9,7 @@ steps:
       'apps/reservations/Dockerfile',
       '.'
     ]
-  -name: 'gcr.io/cloudbuilders/docker'
+  - name: 'gcr.io/cloudbuilders/docker'
    args: 
       ['push', 'europe-west1-docker.pkg.dev/sleeper-466517/reservations/production']
 
@@ -23,7 +23,7 @@ steps:
       'apps/auth/Dockerfile',
       '.'
     ]
-  -name: 'gcr.io/cloudbuilders/docker'
+  - name: 'gcr.io/cloudbuilders/docker'
     args: 
       ['push', 'europe-west1-docker.pkg.dev/sleeper-466517/auth/production']
 
@@ -51,6 +51,6 @@ steps:
       'apps/payments/Dockerfile',
       '.'
     ]
-  -name: 'gcr.io/cloudbuilders/docker'
+  - name: 'gcr.io/cloudbuilders/docker'
     args: 
       ['push', 'europe-west1-docker.pkg.dev/sleeper-466517/payments/production']
